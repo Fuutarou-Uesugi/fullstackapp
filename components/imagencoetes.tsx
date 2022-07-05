@@ -1,0 +1,41 @@
+
+import {gql, useQuery} from '@apollo/client'
+interface Coete {
+    ships: Array<Iconos>
+}
+interface Iconos{
+    name : string
+    home_port: string
+    image: string
+}
+const script= gql`
+{
+    launchesPast(limit: 10) {
+      ships {
+        name
+        home_port
+        image
+      }
+    }
+  }
+`
+export const CoetesImagen = () => {
+    const {data,loading,error} = useQuery(script)
+    return <>
+        {
+            loading
+            ? <p>cargando el componente</p>
+            : data.launchesPast.map( ( {ships}: Coete) => {
+                return ships.map( ({home_port,image,name}) => {
+                    return <div className='
+                    m-5 bg-neutral-600 p-6 rounded hover:bg-indigo-500 transition
+                    ' key={image}>
+                        <h1>{home_port}</h1>
+                        <img src={image}></img>
+                        <p>{name}</p>
+                    </div>
+                })
+            })
+        }
+    </>
+}

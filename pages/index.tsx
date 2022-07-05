@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { ApolloProvider } from "@apollo/client";
 import client from "../apollo-client";
 import { Componente } from '../components/componente';
+import { CoetesImagen } from '../components/imagencoetes';
 
 const Home: NextPage = () => {
   
@@ -20,7 +21,10 @@ const Home: NextPage = () => {
             px-6 py-2 hover:text-indigo-400 hover:border-black transition cursor-pointer select-none
             '>titulo de este metodo</h1>
           </a>
-          
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'>
+            <CoetesImagen/>
+          </div>
+            
           <Componente/>
           <button className='
           text-indigo-600 bg-black m-6 p-6 rounded-full hover:text-white 

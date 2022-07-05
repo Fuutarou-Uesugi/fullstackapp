@@ -19,10 +19,13 @@ const script= gql`
 `
 export const Componente = () => {
     const {data,loading,error} = useQuery(script)
-
-    if (error) return <>
+    
+    if (error) {
+        console.log(error.message)
+        return <>
             <p>error</p>
         </>
+    }
 
     return <>
         {
