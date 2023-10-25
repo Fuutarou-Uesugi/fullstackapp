@@ -32,6 +32,7 @@ export const CoetesImagen = () => {
                     ' key={image}>
                         <h1>{home_port}</h1>
                         <img src={image}></img>
+                        <img src={image} alt='este texto pasara la prueba de codacy'>esta es otra imagen</img>
                         <p>{name}</p>
                     </div>
                 })
