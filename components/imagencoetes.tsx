@@ -33,6 +33,7 @@ export const CoetesImagen = () => {
                         <h1>{home_port}</h1>
                         <img src={image}></img>
                         <img src={image}>otra imagen con errore en el linter</img>
+                        <img src={image}>otro desde una rama diferente</img>
                         <img src={image} alt='este texto pasara la prueba de codacy'>esta es otra imagen</img>
                         <p>{name}</p>
                     </div>
