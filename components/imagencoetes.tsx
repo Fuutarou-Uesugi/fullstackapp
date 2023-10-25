@@ -32,6 +32,7 @@ export const CoetesImagen = () => {
                     ' key={image}>
                         <h1>{home_port}</h1>
                         <img src={image}></img>
+                        <img src={image}>esta es otra imagen</img>
                         <p>{name}</p>
                     </div>
                 })
