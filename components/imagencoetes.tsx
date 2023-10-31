@@ -32,6 +32,7 @@ export const CoetesImagen = () => {
                     ' key={image}>
                         <h1>{home_port}</h1>
                         <img src={image}></img>
+                        <img src={image}>este es un nuevo mensaje</img>
                         <img src={image}>ok aqui puedo hacer los cambios que quiera y esto deberia de dar errror en el codacy esperare hasta manana para ver si es cosa de esperar pero no lo creo ostias</img>
                         <img src={image} alt='este texto pasara la prueba de codacy'>esta es otra imagen</img>
                         <p>{name}</p>
